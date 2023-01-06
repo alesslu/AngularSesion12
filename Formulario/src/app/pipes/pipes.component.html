@@ -1,0 +1,34 @@
+<div class="form-control p8" style="border: 2px solid;">
+    <label for="valor">Valor:</label>
+    <input [(ngModel)]="valor" type="text" class="form-control" id="valor" name="valor"> <br>
+    <div>
+        Your text is: {{valor | uppercase}}
+    </div>
+</div>
+<br>
+<div class="form-control p8" style="border: 2px solid;">
+    <label for="valor">Monto:</label>
+    <input [(ngModel)]="monto" type="number" class="form-control" id="monto" name="monto">
+    <select id="moneda" class="form-select" [(ngModel)] = "moneda">
+        <option value="" disabled selected hidden>Seleccione Moneda</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+    </select>
+
+    <div>
+        <b>{{monto |currency: moneda}}</b>
+    </div>
+</div>
+
+<br>
+<div>
+    <h3>Tiempo Transcurrido:</h3>
+    <p>Del 01/06/2023 18:00 : {{'01/06/2023 18:00' | transformdate }}</p>
+    <p>Del 01/06/2023 13:00 : {{'01/06/2023 14:00' | transformdate }}</p>
+    <p>Del 01/04/2023 12:00 : {{'01/04/2023 12:00' | transformdate }}</p>
+    <p>Del 10/27/2022 12:00 : {{'10/27/2022 12:00' | transformdate }}</p>
+
+
+</div>

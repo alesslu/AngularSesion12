@@ -5,19 +5,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { TransformdatePipe } from './pipes/transformdate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    ContactReactiveComponent
+    ContactReactiveComponent,
+    PipesComponent,
+    TransformdatePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    TransformdatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
